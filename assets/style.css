@@ -79,3 +79,31 @@ div.navbar a:hover:before, div.navbar a:hover:after{
     padding: 5px 20px;
     width: 180px;
 }
+
+button {
+    display: inline;
+    font-size: 1.3rem;
+    background-color: #51A629;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.buttons a {
+    color: #00030D;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+button:hover, button a:hover{
+    color: #D5DAF2;
+    background-color: #47A603;
+}
+
+.form, .table, .cards{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
