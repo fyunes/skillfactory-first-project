@@ -2,6 +2,7 @@ body{
     color: #fff;
     margin: 0 auto;
     background-color: #00030D;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*HEADER*/
@@ -118,6 +119,60 @@ button:hover, button a:hover{
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+/*FORM*/
+
+.wrapper {
+	display: flex;
+    justify-content: center;
+	flex-flow: row nowrap;
+	background-color: #010326;
+	width: 33%;
+	margin: 3rem auto;
+	padding: 1em;
+}
+
+.wrapper h2, .wrapper p{
+    text-align: center;
+}
+
+fieldset{
+	margin-top: 4rem;
+    border: none;
+	border-radius: 10px;
+}
+
+legend{
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+label{
+    display: block;
+	padding-bottom: 0.5rem;
+}
+
+textarea{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding: 2rem;
+}
+
+select{
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+input:not([type="radio"]), textarea {
+	font-size: 1.3rem;
+	width: 20rem;
+	margin-bottom: 2rem;
+	padding: 0 1rem;
+	border: none;
+	border-radius: 5px;
 }
 
 /*FOOTER*/
