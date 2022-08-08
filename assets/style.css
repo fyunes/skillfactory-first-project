@@ -1,5 +1,7 @@
 body{
+    color: #fff;
     margin: 0 auto;
+    background-color: #00030D;
 }
 
 div.navbar{
@@ -7,12 +9,12 @@ div.navbar{
     font-size: 1.1rem;
     display: flex;
     justify-content: space-evenly;
-    background-color: cadetblue;
+    background-color: #010326;
     padding: 1rem 2rem;
 }
 
 div.navbar a{
-    color: white;
+    color: #D5DAF2;
     padding: 0.5rem;
     text-decoration: none;
     position: relative;
@@ -24,7 +26,7 @@ div.navbar a::before, div.navbar a::after{
     left: 0px;
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: #D5DAF2;
     content: "";
     opacity: 0;
     transition: all 0.3s;
@@ -43,4 +45,37 @@ div.navbar a:after{
 div.navbar a:hover:before, div.navbar a:hover:after{
     opacity: 1;
     transform: translateY(0px);
+}
+
+.welcome{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6rem;
+}
+
+.buttons img{
+    background-color: #D5DAF2;
+    width: 150px;
+}
+
+.buttons img:nth-child(1){
+    border-radius: 10%;
+    padding: 20px 20px;
+}
+
+.buttons img:nth-child(2){
+    border-radius: 50%;
+    padding: 20px 20px;
+}
+
+.buttons img:nth-child(3){
+    border-radius: 10%;
+    padding: 5px 20px;
+    width: 180px;
 }
