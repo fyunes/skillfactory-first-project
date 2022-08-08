@@ -4,6 +4,8 @@ body{
     background-color: #00030D;
 }
 
+/*HEADER*/
+
 div.navbar{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.1rem;
@@ -50,13 +52,15 @@ div.navbar a:hover:before, div.navbar a:hover:after{
 .welcome{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
+
+/*BUTTONS*/
 
 .buttons{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 6rem;
+    margin: 4rem 0;
 }
 
 .buttons img{
@@ -106,4 +110,13 @@ button:hover, button a:hover{
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    align-items: flex-end;
 }
