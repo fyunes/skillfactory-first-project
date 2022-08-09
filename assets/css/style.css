@@ -23,6 +23,7 @@ div.navbar {
   width: 100%;
   top: 0%;
   padding: 0;
+  z-index: 2;
 }
 
 div.navbar img {
@@ -270,8 +271,6 @@ span {
   margin: 0 auto;
 }
 
-
-
 .card-footer {
   width: 0%;
   height: 100%;
@@ -285,8 +284,8 @@ span {
   transition: all 400ms ease-in-out;
 }
 
-.card:hover .card-footer{
-    width: 100%;
+.card:hover .card-footer {
+  width: 100%;
 }
 
 .card-footer h3 {
@@ -294,4 +293,35 @@ span {
   font-size: 1.5rem;
   border: 6px solid #fff;
   padding: 0.8em 1.9em;
+}
+
+.tableUsers {
+  width: 90%;
+  border: 1px solid white;
+  margin: 0 auto;
+}
+
+.col {
+  width: 15%;
+  text-align: left;
+}
+
+td {
+  border: 1px solid white;
+  padding: 2px;
+  background-color: rgb(197, 251, 158);
+  color: #6b87ed;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tableUsers {
+  background-color: #fff;
+}
+
+tr:nth-child(1) {
+  background-color: rgb(202, 78, 78);
 }
