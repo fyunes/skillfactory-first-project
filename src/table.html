@@ -22,29 +22,31 @@
             <a href="./form.html">Contact us</a>
         </div>
     </header>
-    <div class="container">
+    <section class="container">
         <h2 class="container__title">Lista de Empleados (versión card)</h2>
         <div id="api"></div>
+    </section>
+    <section class="container">
         <h2 class="container__title">Lista de Empleados (versión tabla)</h2>
-        <div>
-            <table class="tableUsers">
-                
-                    <tr class="header__table">
-                        <td class="col">ID</td>
-                        <td class="col">Nombre</td>
-                        <td class="col">email</td>
-                        <td class="col">Ciudad</td>
-                        <td class="col">Telefono</td>
-                        <td class="col">Website</td>
-                    </tr>
-                
-                <tbody id="tableDatos">
+        <table class="tableUsers">
+            <thead>
+                <tr>
+                    <th class="col">ID</th>
+                    <th class="col">Nombre</th>
+                    <th class="col">email</th>
+                    <th class="col">Ciudad</th>
+                    <th class="col">Telefono</th>
+                    <th class="col">Website</th>
+                </tr>
+            </thead>
 
-                </tbody>
-            </table>
+            <tbody id="tableDatos">
 
-        </div>
-    </div>
+            </tbody>
+        </table>
+    </section>
+
+
     <footer>
         <div class="footer">
             <p>&copy; 2022 - <span>All rights reserved</span></p>

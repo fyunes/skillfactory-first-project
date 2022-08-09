@@ -309,17 +309,19 @@ span {
 td {
   border: 1px solid white;
   padding: 2px;
-}
-
-.header__table {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  background-color: rgb(197, 251, 158);
+  color: #6b87ed;
 }
 
 .row {
   display: flex;
   justify-content: flex-start;
+}
+
+.tableUsers {
+  background-color: #fff;
+}
+
+tr:nth-child(1) {
+  background-color: rgb(202, 78, 78);
 }
