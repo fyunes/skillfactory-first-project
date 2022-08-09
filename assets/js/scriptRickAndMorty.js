@@ -1,27 +1,33 @@
-let array = [];
-  for (let i = 0; i < 80; i++) {
-    array.push(i);
+const URL_RNM = `https://rickandmortyapi.com/api/character/`;
+
+const getData = (apiURL) => {
+  return fetch(apiURL)
+        .then(response => response.json())
+        .then(json => {
+            printData(json),
+            printPagination(json.info)
+          })
+        .catch(error => {console.error('Error: ', error)})
 }
-const URL_RYM = `https://rickandmortyapi.com/api/character/${array}`;
-
-fetch(URL_RYM)
-  .then((response) => response.json())  
-  .then((data) => chars(data));
-
-const chars = (data) => {    
-  let characters = data;  
+const printData = (data) => {
   let body = ``;
-  characters.forEach(({ image, species, name, gender, status, origin, location}) => {
+  data.results.forEach(c => {
     body += `
         <div>            
-            <img src="${image}" alt="${name}">
-            <h3>${name}</h3>
-            <div>${species}</div>
-            <div>${status}</div>
-            <div>${gender}</div>
-            <p>${origin.name}</p>
-            <p>${location.name}</p>                
+            <img src="${c.image}" alt="${c.name}">
+            <h3>${c.name}</h3>
+            <div>${c.species}</div>
+            <div>${c.status}</div>
+            <div>${c.gender}</div>
+            <p>${c.origin.name}</p>
+            <p>${c.location.name}</p>                
         </div>`;
   });
-  document.getElementById("fetch-rickandmorty").innerHTML = body;
-};
+  document.getElementById('fetch-rickandmorty').innerHTML = body
+}
+const printPagination = (info) => {
+    let body = `<li><span onclick="getData('${info.prev}')">Previous</span></li>`
+    body += `<li><span onclick="getData('${info.next}')"> Next</span></li>`
+    document.getElementById('pagination').innerHTML = body;
+}
+getData(URL_RNM);
