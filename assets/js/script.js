@@ -31,4 +31,26 @@ const userData = (data) => {
   document.getElementById("api").innerHTML = body;
 };
 
- 
+ /* Versión Tabla */
+
+ fetch(urlBase)
+  .then((response) => response.json())
+  .then((data) => userDataTable(data));
+
+  const userDataTable = (data) => {
+    let user = data;
+    let body = ``;
+    user.forEach(({ id, name, email, address, phone, website }) => {
+      body += `
+        <tr>
+          <td class="col">${id}</td>
+          <td class="col">${name}</td>
+          <td class="col">${email}</td>
+          <td class="col">${address.city}</td>
+          <td class="col">${phone}</td>
+          <td class="col">${website}</td>
+        </tr>
+               `;
+    });
+    document.getElementById("tableDatos").innerHTML = body;
+  };
