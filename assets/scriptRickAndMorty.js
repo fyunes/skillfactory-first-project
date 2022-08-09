@@ -7,10 +7,9 @@ const URL_RYM = `https://rickandmortyapi.com/api/character/${array}`;
 fetch(URL_RYM)
   .then((response) => response.json())  
   .then((data) => chars(data));
-  
+
 const chars = (data) => {    
-  let characters = data;
-  console.log(data)
+  let characters = data;  
   let body = ``;
   characters.forEach(({ image, species, name, gender, status, origin, location}) => {
     body += `
