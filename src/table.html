@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,48 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/660/660611.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-    
+
     <header>
         <div class="navbar">
             <a href="../index.html">Home</a>
             <a href="./cards.html">Characters</a>
-            <img src="http://www.da-files.com/contests/2015/rick-and-morty/img/img-ram-portal.png" alt="Site's logo: Rick and Morty green portal.">
+            <img src="http://www.da-files.com/contests/2015/rick-and-morty/img/img-ram-portal.png"
+                alt="Site's logo: Rick and Morty green portal.">
             <a href="./table.html">Users</a>
             <a href="./form.html">Contact us</a>
         </div>
     </header>
-<div class="container">
-    <h1 class="container__title">Lista de Empleados</h1>
-    <div id="api"></div>
-</div>
+    <div class="container">
+        <h2 class="container__title">Lista de Empleados (versión card)</h2>
+        <div id="api"></div>
+        <h2 class="container__title">Lista de Empleados (versión tabla)</h2>
+        <div>
+            <table class="table">
+                
+                    <tr class="header__table">
+                        <td class="col">ID</td>
+                        <td class="col">Nombre</td>
+                        <td class="col">email</td>
+                        <td class="col">Ciudad</td>
+                        <td class="col">Telefono</td>
+                        <td class="col">Website</td>
+                    </tr>
+                
+                <tbody id="tableDatos">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
     <footer>
         <div class="footer">
             <p>&copy; 2022 - <span>All rights reserved</span></p>
         </div>
     </footer>
-<script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
+
 </html>

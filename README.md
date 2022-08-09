@@ -21,5 +21,9 @@
        <a href="https://github.com/MelinaLencina">
         <img src="https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white&style=for-the-badge" />
        </a> 
+       <h3>Fabricio Hang</h3>
+       <a href="https://github.com/saveasfabri">
+        <img src="https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white&style=for-the-badge" />
+       </a> 
   
 </div>
