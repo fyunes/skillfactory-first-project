@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:wght@300;500&display=swap');
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -15,10 +17,17 @@ div.navbar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+<<<<<<< HEAD
   font-family: "Lucida Sans", "Lucida Sans Regpagination-divar", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.1rem;
   background-color: #010326;
+=======
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  background-color: #03041a;
+>>>>>>> e62b296cfda541b9782f926eddb2e26871eefdd7
   position: fixed;
   width: 100%;
   top: 0%;
@@ -67,7 +76,8 @@ div.navbar a:hover:after {
 }
 
 .welcome {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Kanit';
+  font-size: 3rem;
   text-align: center;
   margin-top: 2rem;
 }
@@ -93,28 +103,28 @@ div.navbar a:hover:after {
 }
 
 .buttons img:nth-child(1) {
-  border-radius: 10%;
   padding: 20px 20px;
+  border-radius: 10%;
 }
 
 .buttons img:nth-child(2) {
-  border-radius: 50%;
   padding: 20px 20px;
+  border-radius: 50%;
 }
 
 .buttons img:nth-child(3) {
   width: 180px;
-  border-radius: 10%;
   padding: 5px 20px;
+  border-radius: 10%;
 }
 
-button {
+.button-icon {
   display: inline;
   font-size: 1.3rem;
   background-color: #51a629;
   width: 100%;
-  padding: 0.5rem;
   margin-top: 2rem;
+  padding: 0.5rem;
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px 2px #47a603;
@@ -127,15 +137,12 @@ button {
   text-transform: uppercase;
 }
 
-button:hover,
-button a:hover {
+.button-icon:hover, .button-icon a:hover {
   color: #d5daf2;
   background-color: #4ca193;
 }
 
-.form,
-.table,
-.cards {
+.form, .table, .cards {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -153,8 +160,7 @@ button a:hover {
   padding: 1em;
 }
 
-.wrapper h2,
-.wrapper p {
+.wrapper h2, .wrapper p {
   text-align: center;
 }
 
@@ -177,9 +183,13 @@ label {
 }
 
 textarea {
+<<<<<<< HEAD
   font-family: "Lucida Sans", "Lucida Sans Regpagination-divar", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 2rem;
+=======
+  font-family: 'Montserrat', sans-serif;
+>>>>>>> e62b296cfda541b9782f926eddb2e26871eefdd7
 }
 
 select {
@@ -188,8 +198,7 @@ select {
   margin-bottom: 2rem;
 }
 
-input:not([type="radio"]),
-textarea {
+input:not([type="radio"]), textarea {
   font-size: 1.3rem;
   width: 20rem;
   margin-bottom: 2rem;
@@ -198,130 +207,138 @@ textarea {
   border-radius: 5px;
 }
 
-/*FOOTER*/
+/* USERS */
 
-footer {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-align: center;
-  background-color: #010326;
-  position: absolute;
-  width: 99%;
-  padding: 1rem;
-  padding-right: 0%;
-  bottom: 0%;
-}
-
-/* Users Section */
-
-.container {
+.users {
   width: 100vw;
-  margin: 50px 20px;
+  margin: 50px 0;
 }
 
-.container__title {
+.users-cards {
+  font-family: 'Kanit';
+  font-size: 4.2rem;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-#api {
+.table{
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+#usersInfo {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.card {
+.user-card {
+  color: #000;
   background-color: #fff;
   position: relative;
-  color: black;
+  width: 30rem;
   margin: 20px;
   border-radius: 25px;
   overflow: hidden;
   cursor: pointer;
 }
 
-.card__title {
+.user-title {
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 18px;
   text-align: center;
 }
 
-.card__text {
+.user-text {
   font-weight: 700;
 }
-span {
+
+.user-data {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
   font-weight: normal;
-  font-size: 14px;
 }
 
-.card-body {
+.user-content {
   display: flex;
 }
 
-.col--left {
-  background-color: #47a603;
-  width: 60%;
-  height: 250px;
+.col-left {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #51a629;
+  width: 60%;
+  height: 250px;
 }
 
-.col--right {
+.col-right {
   width: 100%;
   padding: 10px;
   margin: 0 auto;
 }
 
-.card-footer {
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  background: rgba(139, 202, 110, 0.81);
-  top: 0;
+.user-effect {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(171, 226, 145, 0.81);
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
   overflow: hidden;
   transition: all 400ms ease-in-out;
 }
 
-.card:hover .card-footer {
+.user-card:hover .user-effect {
   width: 100%;
 }
 
-.card-footer h3 {
-  color: #fff;
+.user-effect h3 {
   font-size: 1.5rem;
-  border: 6px solid #fff;
+  color: #010326;
   padding: 0.8em 1.9em;
+  border: 6px solid #010326;
+  border-radius: 20px;
 }
 
-.tableUsers {
+.users-table {
   width: 90%;
-  border: 1px solid white;
   margin: 0 auto;
+  border: 1px solid white;
+  border-collapse: collapse;
 }
 
 .col {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: light 300;
+  text-align: center;
+  color: #ffffff;
   width: 15%;
-  text-align: left;
+  padding: 1rem;
+  border: 3px solid white;
 }
 
-td {
-  border: 1px solid white;
-  padding: 2px;
-  background-color: rgb(197, 251, 158);
-  color: #6b87ed;
+.user-row:hover {
+  background: #040e31;
 }
 
-.row {
-  display: flex;
-  justify-content: flex-start;
+.table-header{
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  font-weight: medium 400;
+  text-align: center;
+  background-color: #51a629;
+  width: 15%;
+  padding: 1rem;
+  border: 3px solid white;
 }
 
-.tableUsers {
-  background-color: #fff;
-}
+/*FOOTER*/
 
+<<<<<<< HEAD
 tr:nth-child(1) {
   background-color: rgb(202, 78, 78);
 }
@@ -372,4 +389,16 @@ tr:nth-child(1) {
   box-sizing: content-box ;
   width: 20%;
   text-align: center;
+=======
+footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  background-color: #03041a;
+  position: absolute;
+  width: 99%;
+  padding: 1rem;
+  padding-right: 0%;
+  bottom: 0%;
+>>>>>>> e62b296cfda541b9782f926eddb2e26871eefdd7
 }
