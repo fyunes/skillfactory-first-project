@@ -9,6 +9,7 @@ const getData = (apiURL) => {
           })
         .catch(error => {console.error('Error: ', error)})
 }
+
 const printData = (data) => {
   let body = ``;
   data.results.forEach(c => {
@@ -25,9 +26,16 @@ const printData = (data) => {
   });
   document.getElementById('fetch-rickandmorty').innerHTML = body
 }
+
 const printPagination = (info) => {
-    let body = `<li><span onclick="getData('${info.prev}')">Previous</span></li>`
-    body += `<li><span onclick="getData('${info.next}')"> Next</span></li>`
+    let body = `
+      <li>
+        <span onclick="getData('${info.prev}')">Previous</span>
+      </li>`
+    body += `
+      <li>
+        <span onclick="getData('${info.next}')">Next</span>
+      </li>`
     document.getElementById('pagination').innerHTML = body;
 }
 getData(URL_RNM);
