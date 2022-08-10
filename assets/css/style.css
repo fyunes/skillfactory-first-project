@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:wght@300;500&display=swap');
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -67,9 +69,10 @@ div.navbar a:hover:after {
 }
 
 .welcome {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Kanit';
   text-align: center;
   margin-top: 2rem;
+  font-size: 3rem;
 }
 
 .cover {
@@ -198,6 +201,138 @@ textarea {
   border-radius: 5px;
 }
 
+/* USERS */
+
+.users {
+  width: 100vw;
+  margin: 50px 0;
+}
+
+.users-cards {
+  text-align: center;
+  font-family: 'Kanit';
+  font-size: 4.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.table{
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+#usersInfo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  background-color: #fff;
+  position: relative;
+  color: black;
+  width: 30rem;
+  margin: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user-title {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.user-text {
+  font-weight: 700;
+}
+
+.user-data {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+.user-content {
+  display: flex;
+}
+
+.col-left {
+  background-color: #51a629;
+  width: 60%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-right {
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.card-effect {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background: rgba(171, 226, 145, 0.81);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+}
+
+.user-card:hover .card-effect {
+  width: 100%;
+}
+
+.card-effect h3 {
+  color: #010326;
+  font-size: 1.5rem;
+  border: 6px solid #010326;
+  padding: 0.8em 1.9em;
+  border-radius: 20px;
+}
+
+.users-table {
+  width: 90%;
+  border: 1px solid white;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.col {
+  width: 15%;
+  text-align: center;
+  padding: 1rem;
+  color: #ffffff;
+  border: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: light 300;
+}
+
+.user-row:hover {
+  background: #040e31;
+}
+
+.table-header{
+  width: 15%;
+  border: 3px solid white;
+  background-color: #51a629;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Montserrat';
+  font-weight: medium 400;
+  font-size: 1.2rem;
+}
+
+
+
+
 /*FOOTER*/
 
 footer {
@@ -209,119 +344,4 @@ footer {
   padding: 1rem;
   padding-right: 0%;
   bottom: 0%;
-}
-
-/* Users Section */
-
-.container {
-  width: 100vw;
-  margin: 50px 20px;
-}
-
-.container__title {
-  text-align: center;
-}
-
-#api {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: #fff;
-  position: relative;
-  color: black;
-  margin: 20px;
-  border-radius: 25px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.card__title {
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-}
-
-.card__text {
-  font-weight: 700;
-}
-span {
-  font-weight: normal;
-  font-size: 14px;
-}
-
-.card-body {
-  display: flex;
-}
-
-.col--left {
-  background-color: #47a603;
-  width: 60%;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.col--right {
-  width: 100%;
-  padding: 10px;
-  margin: 0 auto;
-}
-
-.card-footer {
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  background: rgba(139, 202, 110, 0.81);
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: all 400ms ease-in-out;
-}
-
-.card:hover .card-footer {
-  width: 100%;
-}
-
-.card-footer h3 {
-  color: #fff;
-  font-size: 1.5rem;
-  border: 6px solid #fff;
-  padding: 0.8em 1.9em;
-}
-
-.tableUsers {
-  width: 90%;
-  border: 1px solid white;
-  margin: 0 auto;
-}
-
-.col {
-  width: 15%;
-  text-align: left;
-}
-
-td {
-  border: 1px solid white;
-  padding: 2px;
-  background-color: rgb(197, 251, 158);
-  color: #6b87ed;
-}
-
-.row {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.tableUsers {
-  background-color: #fff;
-}
-
-tr:nth-child(1) {
-  background-color: rgb(202, 78, 78);
 }
