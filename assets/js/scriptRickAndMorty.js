@@ -29,19 +29,9 @@ const printData = (data) => {
 }
 
 const printPagination = (info) => {
-<<<<<<< HEAD
     let body = `<button onclick="getData('${info.prev}')">Previous</button>`
     body += `<button onclick="getData('${info.next}')"> Next</button>`
-=======
-    let body = `
-      <li>
-        <span onclick="getData('${info.prev}')">Previous</span>
-      </li>`
-    body += `
-      <li>
-        <span onclick="getData('${info.next}')">Next</span>
-      </li>`
->>>>>>> e62b296cfda541b9782f926eddb2e26871eefdd7
+
     document.getElementById('pagination').innerHTML = body;
 }
 getData(URL_RNM);
