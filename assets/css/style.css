@@ -17,17 +17,14 @@ div.navbar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-<<<<<<< HEAD
   font-family: "Lucida Sans", "Lucida Sans Regpagination-divar", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.1rem;
   background-color: #010326;
-=======
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 200;
   background-color: #03041a;
->>>>>>> e62b296cfda541b9782f926eddb2e26871eefdd7
   position: fixed;
   width: 100%;
   top: 0%;
@@ -182,15 +179,7 @@ label {
   padding-bottom: 0.5rem;
 }
 
-textarea {
-<<<<<<< HEAD
-  font-family: "Lucida Sans", "Lucida Sans Regpagination-divar", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 2rem;
-=======
-  font-family: 'Montserrat', sans-serif;
->>>>>>> e62b296cfda541b9782f926eddb2e26871eefdd7
-}
+
 
 select {
   font-size: 1rem;
@@ -338,10 +327,7 @@ input:not([type="radio"]), textarea {
 
 /*FOOTER*/
 
-<<<<<<< HEAD
-tr:nth-child(1) {
-  background-color: rgb(202, 78, 78);
-}
+
 /*--------------- Rick and Morty CSS Starts Here-------------------- */
 .rnm-pagination-div {
   display: flex;  
@@ -389,16 +375,4 @@ tr:nth-child(1) {
   box-sizing: content-box ;
   width: 20%;
   text-align: center;
-=======
-footer {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
-  text-align: center;
-  background-color: #03041a;
-  position: absolute;
-  width: 99%;
-  padding: 1rem;
-  padding-right: 0%;
-  bottom: 0%;
->>>>>>> e62b296cfda541b9782f926eddb2e26871eefdd7
 }
