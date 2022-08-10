@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,30 +21,30 @@
             <a href="./form.html">Contact us</a>
         </div>
     </header>
-    <section class="container">
-        <h2 class="container__title">Lista de Empleados (versión card)</h2>
-        <div id="api"></div>
-    </section>
-    <section class="container">
-        <h2 class="container__title">Lista de Empleados (versión tabla)</h2>
-        <table class="tableUsers">
+
+    <section class="users">
+        <h2 class="users-cards">Users</h2>
+        <p class="users-cards table">(table)</p>
+        <table class="users-table">
             <thead>
                 <tr>
-                    <th class="col">ID</th>
-                    <th class="col">Nombre</th>
-                    <th class="col">email</th>
-                    <th class="col">Ciudad</th>
-                    <th class="col">Telefono</th>
-                    <th class="col">Website</th>
+                    <th class="table-header">ID: </th>
+                    <th class="table-header">Name: </th>
+                    <th class="table-header">Email: </th>
+                    <th class="table-header">City: </th>
+                    <th class="table-header">Phone number: </th>
+                    <th class="table-header">Website: </th>
                 </tr>
             </thead>
-
-            <tbody id="tableDatos">
-
-            </tbody>
+            <tbody id="usersTable"></tbody>
         </table>
     </section>
 
+    <section class="users">
+        <h2 class="users-cards">Users</h2>
+        <p class="users-cards table">(cards)</p>
+        <div id="usersInfo"></div>
+    </section>
 
     <footer>
         <div class="footer">
