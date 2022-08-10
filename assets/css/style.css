@@ -327,8 +327,20 @@ input:not([type="radio"]), textarea {
 
 /*FOOTER*/
 
+footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  background-color: #03041a;
+  position: absolute;
+  width: 99%;
+  padding: 1rem;
+  padding-right: 0%;
+  bottom: 0%;
+}
 
-/*--------------- Rick and Morty CSS Starts Here-------------------- */
+
+/*--------------- Rick and Morty CSS Starts Here (In development)-------------------- */
 .rnm-pagination-div {
   display: flex;  
   justify-content: center;
