@@ -1,6 +1,7 @@
 const URL_RNM = `https://rickandmortyapi.com/api/character/`;
 
 const getData = (apiURL) => {
+  console.log(apiURL)
   return fetch(apiURL)
         .then(response => response.json())
         .then(json => {
