@@ -15,7 +15,7 @@ div.navbar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family: "Lucida Sans", "Lucida Sans Regpagination-divar", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.1rem;
   background-color: #010326;
@@ -177,7 +177,7 @@ label {
 }
 
 textarea {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family: "Lucida Sans", "Lucida Sans Regpagination-divar", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 2rem;
 }
@@ -324,4 +324,52 @@ td {
 
 tr:nth-child(1) {
   background-color: rgb(202, 78, 78);
+}
+/*--------------- Rick and Morty CSS Starts Here-------------------- */
+.rnm-pagination-div {
+  display: flex;  
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.rnm-pagination-div button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 20%;     
+  margin: 0% 2% 2% 0%;
+  border-radius: 20px;
+  background-color: #47a603;
+}
+.rnm-parent-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;  
+  flex-wrap: wrap;
+  
+}
+.rnm-cards {
+  display: flex;
+  width: 20%; 
+  flex-direction: column;
+  margin: 0% 0% 2% 0%;
+  border: solid 1px green;
+}
+.rnm-card-text {
+  padding: 0.5rem;
+  border: solid 1px green;
+}
+.rnm-card-text h3 {
+  text-align: center;
+  border: solid 1px green;  
+}
+.Alive {
+  color: rgb(29, 241, 50);  
+}
+.Dead {
+  color: red;
+  background-color: blue;
+  box-sizing: content-box ;
+  width: 20%;
+  text-align: center;
 }
