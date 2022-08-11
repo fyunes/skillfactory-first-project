@@ -1,4 +1,5 @@
 //Fetch and Print
+
 const URL_RNM = `https://rickandmortyapi.com/api/character/`;
 
 const getData = (apiURL) => {
