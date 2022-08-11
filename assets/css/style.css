@@ -137,6 +137,7 @@ div.navbar a:hover:after {
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px 2px #47a603;
+  cursor: pointer;
 }
 
 .buttons a {
@@ -151,6 +152,12 @@ div.navbar a:hover:after {
   background-color: #4ca193;
 }
 
+.button-icon:active, .button-icon a:active {
+  color: #3f445f;
+  background-color: #40867b;
+  box-shadow: none;
+}
+
 .form, .table, .cards {
   display: flex;
   flex-direction: column;
@@ -159,28 +166,33 @@ div.navbar a:hover:after {
 
 /*FORM*/
 
-.wrapper {
+.form-message {
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #010326;
   width: 33%;
-  margin: 3rem auto;
   padding: 1em;
 }
 
-.wrapper p {
+.form-container p {
   text-align: center;
 }
 
-.wrapper h1 {
+.form-container h1 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 0;
   text-align: center;
 }
 
-.wrapper h2 {
+.form-container h2 {
   font-size: 1rem;
   text-align: center;
 }
@@ -203,7 +215,6 @@ legend {
 }
 
 label {
-  display: block;
   padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -221,7 +232,8 @@ select {
   margin-bottom: 2rem;
 }
 
-input:not([type="radio"]), textarea {	
+textarea, #name, #phone, #email, 
+#submit {	
   width: 100%;
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -230,7 +242,7 @@ input:not([type="radio"]), textarea {
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
-  align-items: center;
+  align-items: center;  
 }
 
 .input-radio {
@@ -246,6 +258,92 @@ input:not([type="radio"]), textarea {
 
 .input-radio label {
   padding: 0;
+}
+
+.message-area { 
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.portal-img {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.portal-img img {
+  width: 100%;
+}
+
+#received-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-title {
+  width: 80%;
+  height: 100%;
+  margin-top: 15px;
+}
+
+.background-mssg {
+  width: 90%;
+  height: auto;
+  padding: 5px;
+  margin-top: 30px;
+  border-radius: 15px;
+  border: 2px solid #7dea25;
+  background-color: #7eea2562;
+  box-shadow: 0 0 30px #7dea25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text-dimension {
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px #051f39;
+  
+}
+#text-form {
+  width: 80%;
+  padding: 0 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.label-message {
+  font-size: .8rem;
+  color: #22a2bd;
+  margin: 0;
+}
+.text-message {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px #051f39;
+}
+.text-message:last-child {
+  margin-bottom: 15px;
+}
+
+/* Validaciones Form */
+
+input:invalid{
+  border-color: #900;
+}
+
+input:focus:invalid {
+  outline: none;
 }
 
 /* USERS */

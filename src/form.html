@@ -8,41 +8,41 @@
     <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/783499342010777631/1006360246391951451/form-title.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
-    
-    <header>
-        <div class="navbar">
-            <a href="../index.html">Home</a>
-            <a href="./cards.html">Characters</a>
-            <img src="https://cdn.discordapp.com/attachments/783499342010777631/1007003048041795634/portal.png" alt="Site's logo: Rick and Morty green portal.">
-            <a href="./table.html">Users</a>
-            <a href="./form.html">Contact us</a>
-        </div>
-    </header>
+<body>    
+	<header>
+			<div class="navbar">
+					<a href="../index.html">Home</a>
+					<a href="./cards.html">Characters</a>
+					<img src="https://cdn.discordapp.com/attachments/783499342010777631/1007003048041795634/portal.png" alt="Site's logo: Rick and Morty green portal.">
+					<a href="./table.html">Users</a>
+					<a href="./form.html">Contact us</a>
+			</div>
+	</header>
 
-		<section>
-			<div class="wrapper">
+	<main>
+		<section class="form-message">
+			<div class="form-container">
 				<h1>Contact us!</h1>
 				<H2>Fill out the form below to send us a message</H2>
 				<form id="form">
 					<fieldset>
 						<legend>Your contact information</legend>
-
+	
 						<label for="name">Name: </label>
 						<input type="text" id="name" name="name" placeholder="John Doe" autofocus required>
-
+	
 						<label for="phone">Phone number: </label>
 						<input type="tel" id="phone" name="phone" placeholder="+54115123456">
-
-						<label for="email">Email: </label>
+	
+						<label for="email">Email: </label> 
 						<input type="email" id="email" name="email" placeholder="johndoe@mail.com" required>
-						<p id="valueInput"></p> 
-
+						
+	
 						<label for="message">Message: </label>
-						<textarea name="message" id="message" cols="90" rows="10" ></textarea>
-
+						<textarea name="message" id="message" cols="90" rows="10" required></textarea>
+	
 						<p>How would you like us to contact you?</p>
-
+	
 						<div class="input-radio">
 							<input type="radio" name="contact" id="contactEmail" value="email">
 							<label for="contactEmail">Email</label>
@@ -52,24 +52,37 @@
 							<input type="radio" name="contact" id="contactPhone" value="phone">
 							<label for="contactPhone">Phone</label>
 						</div>
-
+	
 						<div class="input-radio">
 							<input type="radio" name="contact" id="contactWhapp" value="whatsapp">
 							<label for="contactWhapp">WhatsApp</label>
 						</div>
-
-						<button type="button" onclick="sendForm()">Tuki and send</button>
-
+	
+						<button class="button-icon" type="button" onclick="sendForm()">Tuki and send</button>
+						
 					</fieldset>						
-				</form>
+				</form>		
+			</div>
+			<div class="message-area">
+				<div class="portal-img"><img src="../assets/icons/pngfind.png" alt="portal image"></div>
+				<div id="received-message">
+					
+				</div>
+					
+	
+				</div>
 			</div>
 		</section>
+	</main>
 
-    <footer>
-        <div class="footer">
-            <p>&copy; 2022 - <span>All rights reserved</span></p>
-        </div>
-    </footer>		
+	<footer>
+			<div class="footer">
+					<p>&copy; 2022 - <span>All rights reserved</span></p>
+			</div>
+	</footer>	
+
 </body>
+
 <script src="../assets/js/form.js"></script>
+
 </html>
