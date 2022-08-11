@@ -15,8 +15,10 @@ const printData = (data) => {
   let body = ``;
   data.results.forEach(c => {
     body += `
-        <div class="rnm-cards">            
+        <div class="rnm-cards">
+        <div class="rnm-img">                    
             <img src="${c.image}" alt="${c.name}">
+        </div>    
             <div class= "rnm-card-text">
             <h3 class="${c.name}">${c.name}</h3>
             <div class="${c.species}">${c.species}</div>
@@ -36,3 +38,20 @@ const printPagination = (info) => {
     document.getElementById('pagination').innerHTML = body;
 }
 getData(URL_RNM);
+
+// Scroll Top Button
+
+mybutton = document.getElementById("RNM-Btn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 540 || document.documentElement.scrollTop > 540) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}

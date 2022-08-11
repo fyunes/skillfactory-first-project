@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:wght@300;500&display=swap');
+@keyframes vibrate {
+  0% { transform: rotate(10deg); }
+  10% { transform: rotate(-10deg); }
+  10% { transform: rotate(10deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  60% { transform: rotate(-5deg); }
+  60% { transform: rotate(5deg); }
+  60% { transform: rotate(-15deg); }
+  60% { transform: rotate(15deg); }
+  
+
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -347,29 +361,81 @@ footer {
   font-size: 2rem;
 }
 
-.rnm-pagination-div button {
+/* .rnm-pagination-div button {
   display: flex;
   text-align: center;
   justify-content: center;
+  font-size: 1.3rem;
+  padding: 1rem;
   width: 20%;     
   margin: 0% 2% 2% 0%;
   border-radius: 20px;
   background-color: #47a603;
+} */
+
+.rnm-pagination-div button {
+  display: flex;
+  margin: 0% 2% 2% 0%;
+  width: 15%;
+  justify-content: center;
+  background-color: rgb(11, 212, 44);
+  border: 0;
+  outline: solid;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  font-family: monospace;
+  font-weight: bold;  
+  transition: all 0.3s ;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 5px #666;
+  }
+
+.rnm-pagination-div button:hover {  
+  transform: scale(1.08);
+  box-shadow: 0 8px #666;  
 }
+
+.rnm-pagination-div button:active {  
+  transform: scale(.98);
+}
+
+.rnm-pagination-div button:active {
+  background-color: #8b1b1b;
+  box-shadow: 0 8px #666;
+  transform: translateY(4px);
+}
+
 .rnm-parent-container{
   display: flex;
   justify-content: space-evenly;
   width: 100vw;  
-  flex-wrap: wrap;
-  
+  flex-wrap: wrap;  
 }
+
 .rnm-cards {
   display: flex;
   width: 20%; 
   flex-direction: column;
   margin: 0% 0% 2% 0%;
   border: solid 1px green;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  transition: -webkit-transform 2s;   
 }
+.rnm-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: vibrate 0.8s;  
+  padding-top: 1rem; 
+}
+.rnm-cards:hover {  
+  -webkit-transform: rotateY( 360deg );
+  transform: rotateY( 360deg ); 
+}
+
+------------------------------------------------
 .rnm-card-text {
   padding: 0.5rem;
   border: solid 1px green;
@@ -387,4 +453,25 @@ footer {
   box-sizing: content-box ;
   width: 20%;
   text-align: center;
+}
+
+#RNM-Btn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: red; 
+  color: rgb(5, 4, 4); 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: bold; 
+}
+#RNM-Btn:hover {
+  background-color: rgb(11, 212, 44); 
 }
