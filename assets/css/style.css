@@ -157,22 +157,23 @@ div.navbar a:hover:after {
   padding: 1em;
 }
 
-.wrapper p{
+.wrapper p {
   text-align: center;
 }
+
 .wrapper h1 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 0;
   text-align: center;
 }
+
 .wrapper h2 {
   font-size: 1rem;
-
   text-align: center;
 }
 
-fieldset{
+fieldset {
   width: 100%;
   padding: 0;
   margin-top: 2rem;
@@ -181,7 +182,7 @@ fieldset{
   box-sizing: border-box;
 }
 
-legend{
+legend {
   font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
@@ -189,25 +190,24 @@ legend{
   margin-bottom: 1rem;
 }
 
-label{
+label {
   display: block;
   padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
 }
 
-
-textarea{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+textarea {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular',
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 2rem;
 }
 
-select{
+select {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
-
 
 input:not([type="radio"]), textarea {	
   width: 100%;
@@ -220,7 +220,6 @@ input:not([type="radio"]), textarea {
   display: flex;
   align-items: center;
 }
-
 
 .input-radio {
   height: 30px;
@@ -237,11 +236,7 @@ input:not([type="radio"]), textarea {
   padding: 0;
 }
 
-
-/* Users Section */
-
 /* USERS */
-
 
 .users {
   width: 100vw;
