@@ -25,5 +25,5 @@
        <a href="https://github.com/saveasfabri">
         <img src="https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white&style=for-the-badge" />
        </a> 
-  
+  <h2 align="center">The site is running, go check it out <a href="https://fyunes.github.io/skillfactory-first-project">here</a>!</h2>
 </div>
