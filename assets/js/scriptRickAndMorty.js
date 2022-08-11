@@ -1,3 +1,5 @@
+//Fetch and Print
+
 const URL_RNM = `https://rickandmortyapi.com/api/character/`;
 
 const getData = (apiURL) => {
@@ -30,6 +32,8 @@ const printData = (data) => {
   });
   document.getElementById('fetch-rickandmorty').innerHTML = body
 }
+
+// Pagination Section
 
 const printPagination = (info) => {
     let body = `<button onclick="getData('${info.prev}')">Previous</button>`
