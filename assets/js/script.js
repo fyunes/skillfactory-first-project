@@ -26,9 +26,9 @@ const userDataTable = (data) => {
 const userData = async () => {
   let body = ``;
   try {
-    const datosUsers = await axios(urlBase);
+    const dataUsers = await axios(urlBase);
 
-    datosUsers.data.forEach(({ id, name, email, address, phone, website }) => {
+    dataUsers.data.forEach(({ id, name, email, address, phone, website }) => {
       body += `
   <div>
     <div class="user-card">
