@@ -160,7 +160,7 @@ div.navbar a:hover:after {
 
 .form-message {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   margin: 50px 0;
 }
@@ -170,8 +170,10 @@ div.navbar a:hover:after {
   justify-content: center;
   flex-direction: column;
   background-color: #010326;
-  width: 33%;
+  width: 55%;
+  margin-left: 4rem;
   padding: 1em;
+  border-radius: 10px;
 }
 
 .form-container p {
@@ -179,20 +181,21 @@ div.navbar a:hover:after {
 }
 
 .form-container h1 {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  margin: 0;
   text-align: center;
+  margin: 1rem;
 }
 
 .form-container h2 {
   font-size: 1rem;
   text-align: center;
+  margin: 1rem;
 }
 
 fieldset {
   width: 100%;
-  margin-top: 2rem;
+  margin: 1rem 0 2rem 0;
   padding: 0;
   border: none;
   border-radius: 10px;
@@ -254,12 +257,12 @@ textarea, #name, #phone, #email, #submit {
   padding: 0;
 }
 
-.message-area { 
+.message-dom{
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
-  width: 33%;
   box-sizing: border-box;
+  width: 55%;
 }
 
 .portal-img {
@@ -483,6 +486,23 @@ footer {
   padding: 1rem;
   padding-right: 0%;
   bottom: 0%;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer a{
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer a:hover{
+  font-size: 1.1rem;
+  color: #fff;
+  transition: 0.5s;
 }
 
 /* Rick And Morty Cards */

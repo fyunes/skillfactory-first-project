@@ -18,6 +18,8 @@ const sendForm = () =>{
 
   let body = ``;
   body += `
+  <div class="message-dom">  
+		<div class="portal-img"><img src="../assets/icons/pngfind.png" alt="portal image" /></div>
     <img class="img-title" src="../assets/icons/message.png" alt="Message">
       <div class="background-mssg">
         <h3 class="text-dimension"> From: Dimension C-137</h3>
@@ -33,6 +35,7 @@ const sendForm = () =>{
           <p class = "label-message">Contact through:
             <p class = "text-message">${selectedContact.value}</p>
         </div>
+      </div>
       </div>`;
 
   document.getElementById("received-message").innerHTML = body;
