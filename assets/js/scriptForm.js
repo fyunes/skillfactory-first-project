@@ -19,7 +19,7 @@ const sendForm = () =>{
   let body = ``;
   body += `
   <div class="message-dom">  
-				<div class="portal-img"><img src="../assets/icons/pngfind.png" alt="portal image" /></div>
+		<div class="portal-img"><img src="../assets/icons/pngfind.png" alt="portal image" /></div>
     <img class="img-title" src="../assets/icons/message.png" alt="Message">
       <div class="background-mssg">
         <h3 class="text-dimension"> From: Dimension C-137</h3>
