@@ -24,7 +24,7 @@ const printData = (data) => {
             <div class= "rnm-card-text">
             <h3 class="${c.name}">${c.name}</h3>
             <div class="rnm-text-area">
-            <div class="${c.species}">Species: ${c.species}</div>
+            <div>Species: ${c.species}</div>
             <div class="${c.status}">${c.status}</div>
             <div>Gender: ${c.gender}</div>
             <p>Origin: ${c.origin.name}</p>
