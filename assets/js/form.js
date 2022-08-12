@@ -6,7 +6,7 @@ const sendForm = () =>{
   let selectedContact = document.querySelector('input[name="contact"]:checked');
 
   if(!selectedContact){
-        alert('Por favor seleccione una opcion de contacto');
+        alert('Please, Select a contact option.');
     };
 
   console.log(`Message sent by: "${nameValue}"`);
