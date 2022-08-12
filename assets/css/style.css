@@ -100,6 +100,11 @@ div.navbar a:hover:after {
   margin: 3rem 0;
 }
 
+.index-icon:hover {
+  transition: ease-in-out 0.5s;
+  transform: scale(1.2);
+}
+
 /*BUTTONS*/
 
 .buttons {
@@ -545,6 +550,7 @@ footer {
   display: flex;  
   justify-content: center;  
 }
+
 .rnm-counter-container {
   display: flex;
   justify-content: center;
@@ -650,14 +656,16 @@ footer {
   font-weight: bold;  
   padding: 0.3rem;  
 }
+
 .rnm-card-text h3 {
   text-align: center;  
   text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
+
 .rnm-text-area {
   background-color: #2ac944;
   background-image: url(https://cdn.discordapp.com/attachments/783499342010777631/1007432316181823598/imageedit_4_2672907645.png);
-  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  text-shadow: 5px 2px 5px rgb(0, 0, 0);
   margin: 0.3rem;
   padding: 0.2rem;
   border: solid grey 3px;
@@ -665,24 +673,21 @@ footer {
 
 /* STATUS CLASSES */
 
-.Alive {
-  background-image: url(../icons/alive.svg);
+.Alive, .Dead, .unknown {  
   background-repeat: no-repeat;  
   padding: 0.8rem;
   padding-left: 0.1rem;
+}
+
+.Alive {
+  background-image: url(../icons/alive.svg);
 }
 
 .Dead {
   background-image: url(../icons/dead.svg);
-  background-repeat: no-repeat;  
-  padding: 0.8rem;
-  padding-left: 0.1rem;
 }
 
 .unknown {
   background-image: url(../icons/unknown.svg);
-  background-repeat: no-repeat;
-  background-position: 1%; 
-  padding: 0.8rem;
-  padding-left: 0.1rem;
+  background-position: 1%;
 }
