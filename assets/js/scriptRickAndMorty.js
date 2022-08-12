@@ -1,6 +1,6 @@
-//Fetch and Print
+//FETCH AND PRINT
 
-const URL_RNM = `https://rickandmortyapi.com/api/character/`;
+const URL_RNM = `https://rickandmortyapi.com/api/character/`
 
 const getData = (apiURL) => {
   console.log(apiURL)
@@ -13,7 +13,7 @@ const getData = (apiURL) => {
         .catch(error => {console.error('Error: ', error)})
 }
 
-const printData = (data) => {
+const printData = (data) => {  
   let body = ``;
   data.results.forEach(c => {
     body += `
@@ -23,30 +23,33 @@ const printData = (data) => {
         </div>    
             <div class= "rnm-card-text">
             <h3 class="${c.name}">${c.name}</h3>
-            <div class="${c.species}">${c.species}</div>
+            <div class="rnm-text-area">
+            <div class="${c.species}">Species: ${c.species}</div>
             <div class="${c.status}">${c.status}</div>
-            <div>${c.gender}</div>
-            <p>Origin: ${c.origin.name}</p>            
+            <div>Gender: ${c.gender}</div>
+            <p>Origin: ${c.origin.name}</p>
+            </div>            
             </div>                
         </div>`;
   });
   document.getElementById('fetch-rickandmorty').innerHTML = body
 }
 
-// Pagination Section
+// PAGINATION SECTION
 
 const printPagination = (info) => {
-    let body = `<button onclick="getData('${info.prev}')">Previous</button>`
-    body += `<button onclick="getData('${info.next}')"> Next</button>`
-
+    let body =`<div class="btn-container"><button onclick="getData('${info.prev}'); topFunction(); onClickedPrev()" class =${info.next == "https://rickandmortyapi.com/api/character/?page=2" && "noprev"}>Previous</button></div>`
+    body += `<div class="btn-container"><button onclick="getData('${info.next}');  topFunction();  onClickedNext()"  class =${info.prev == "https://rickandmortyapi.com/api/character/?page=41" && "noprev"}> Next</button></div>`
+    
     document.getElementById('pagination').innerHTML = body;
+    document.getElementById('paginationBottom').innerHTML = body;
 }
 getData(URL_RNM);
 
-// Scroll Top Button
+// SCROLL TOP BUTTON
 
-mybutton = document.getElementById("RNM-Btn");
-window.onscroll = function() {scrollFunction()};
+mybutton = document.getElementById("RNM-Btn")
+window.onscroll = function() {scrollFunction()}
 
 function scrollFunction() {
   if (document.body.scrollTop > 540 || document.documentElement.scrollTop > 540) {
@@ -57,5 +60,18 @@ function scrollFunction() {
 }
 
 function topFunction() {  
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+//PAGE COUNTER
+
+let count = 1;
+let disp = document.getElementById("display")
+const onClickedNext = () => {
+  count++;
+  disp.innerHTML = count;
+}
+const onClickedPrev = () => {
+  count--;
+  disp.innerHTML = count;
 }
