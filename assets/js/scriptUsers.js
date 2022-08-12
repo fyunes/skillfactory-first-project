@@ -21,7 +21,7 @@ const userDataTable = (data) => {
   document.getElementById("usersTable").innerHTML = body;
 };
 
-//promises with axios
+//PROMISES WITH AXIOS
 
 const userData = async () => {
   let body = ``;

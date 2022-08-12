@@ -11,6 +11,7 @@
   60% { transform: rotate(-15deg); }
   60% { transform: rotate(15deg); }
 }
+
 @keyframes FadeInOut {
   0% {opacity:0;}
   25% {opacity:.5;}
