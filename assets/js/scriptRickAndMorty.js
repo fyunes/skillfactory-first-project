@@ -18,17 +18,17 @@ const printData = (data) => {
   data.results.forEach(c => {
     body += `
         <div class="rnm-cards">
-        <div class="rnm-img">                    
+         <div class="rnm-img">                    
             <img src="${c.image}" alt="${c.name}">
-        </div>    
+         </div>    
             <div class= "rnm-card-text">
-            <h3 class="${c.name}">${c.name}</h3>
-            <div class="rnm-text-area">
-            <div>Species: ${c.species}</div>
-            <div class="${c.status}">${c.status}</div>
-            <div>Gender: ${c.gender}</div>
-            <p>Origin: ${c.origin.name}</p>
-            </div>            
+             <h3 class="${c.name}">${c.name}</h3>
+             <div class="rnm-text-area">
+              <div>Species: ${c.species}</div>
+              <div class="${c.status}">${c.status}</div>
+              <div>Gender: ${c.gender}</div>
+              <p>Origin: ${c.origin.name}</p>
+             </div>            
             </div>                
         </div>`;
   });

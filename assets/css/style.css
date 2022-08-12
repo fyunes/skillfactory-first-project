@@ -10,7 +10,13 @@
   60% { transform: rotate(5deg); }
   60% { transform: rotate(-15deg); }
   60% { transform: rotate(15deg); }
-} 
+}
+@keyframes FadeInOut {
+  0% {opacity:0;}
+  25% {opacity:.5;}
+  50% {opacity:.75;}
+  100% {opacity:1;}
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -500,6 +506,21 @@ footer {
 }
 
 /* Rick And Morty Cards */
+
+/* RICK AND MORTY TITLE LOGOS */
+.rnm-logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  -webkit-animation-name: FadeInOut;
+  animation-name: FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+}
 
  /* PAGE UP BUTTON  */
 
