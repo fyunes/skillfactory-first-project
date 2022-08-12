@@ -526,7 +526,9 @@ footer {
 }
 
 .RNM-counter {
-  padding-right: 0.5rem;     
+  padding-right: 0.5rem;
+  font-family: monospace;
+  font-size: 1.5rem;     
 }
 
 .rnm-pagination-div button {
