@@ -3,7 +3,6 @@
 const URL_RNM = `https://rickandmortyapi.com/api/character/`
 
 const getData = (apiURL) => {
-  console.log(apiURL)
   return fetch(apiURL)
         .then(response => response.json())
         .then(json => {
@@ -39,7 +38,7 @@ const printData = (data) => {
 
 const printPagination = (info) => {
     let body =`<div class="btn-container"><button onclick="getData('${info.prev}'); topFunction(); onClickedPrev()" class =${info.next == "https://rickandmortyapi.com/api/character/?page=2" && "noprev"}>Previous</button></div>`
-    body += `<div class="btn-container"><button onclick="getData('${info.next}');  topFunction();  onClickedNext()"  class =${info.prev == "https://rickandmortyapi.com/api/character/?page=41" && "noprev"}> Next</button></div>`
+    body += `<div class="btn-container"><button onclick="getData('${info.next}'); topFunction(); onClickedNext()"  class =${info.prev == "https://rickandmortyapi.com/api/character/?page=41" && "noprev"}>Next</button></div>`
     
     document.getElementById('pagination').innerHTML = body;
     document.getElementById('paginationBottom').innerHTML = body;
