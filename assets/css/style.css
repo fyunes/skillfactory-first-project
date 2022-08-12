@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:wght@300;500&family=Archivo:wght@500&family=Ubuntu:wght@400;700&display=swap');
 @keyframes vibrate {
   0% { transform: rotate(10deg); }
   10% { transform: rotate(-10deg); }
@@ -12,12 +11,6 @@
   60% { transform: rotate(-15deg); }
   60% { transform: rotate(15deg); }
 } 
-@keyframes FadeInOut {
-  0% {opacity:0;}
-  25% {opacity:.5;}
-  50% {opacity:.75;}
-  100% {opacity:1;}
-}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -493,13 +486,13 @@ footer {
 #RNM-Btn {
   display: none; 
   position: fixed;
-  box-sizing: content-box;
-  height: 100px;
   width: 100px; 
+  height: 100px;
   bottom: 20px; 
   right: 10px; 
   z-index: 99; 
   border: solid white 1px; 
+  box-sizing: content-box;
   outline: none;   
   cursor: pointer; 
 }
@@ -519,44 +512,43 @@ footer {
 
 .btn-container {
   display: flex;
-  margin: 0% 2% 0 0%;
+  justify-content: center;
   width: 10%;
-  justify-content: center;    
+  margin: 0% 2% 0 0%;
   padding: 1rem 1.5rem;  
 }
 
 .RNM-counter {
-  padding-right: 0.5rem;
   font-family: monospace;
-  font-size: 1.5rem;     
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
 }
 
 .rnm-pagination-div button {
   display: flex;
-  margin: 0% 2% 2% 0%;
-  width: 100%;
   justify-content: center;
-  background-color: rgb(11, 212, 44);
-  border: 0;
-  outline: solid;
-  padding: 1rem 1.5rem;
-  font-size: 2rem;
   font-family: monospace;
+  font-size: 2rem;
   font-weight: bold;  
-  transition: all 0.3s ;
-  cursor: pointer;
+  background-color: rgb(11, 212, 44);
+  width: 100%;
+  margin: 0% 2% 2% 0%;
+  padding: 1rem 1.5rem;
+  border: 0;
   border-radius: 5px;
   box-shadow: 0 5px #666;
+  outline: solid;
+  transition: all 0.3s ;
+  cursor: pointer;
 }
 
-.rnm-pagination-div .noprev   {
-  display: none ;
-
+.rnm-pagination-div .noprev {
+  display: none;
 }
 
-.rnm-pagination-div button:hover {  
-  transform: scale(1.08);
+.rnm-pagination-div button:hover {
   box-shadow: 0 8px #666;  
+  transform: scale(1.08);
 }
 
 .rnm-pagination-div button:active {  
@@ -572,8 +564,8 @@ footer {
 .rnm-parent-container{
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 100vw;  
-  flex-wrap: wrap;  
 }
 
 /* RICK AND MORTY CARD STYLES */
@@ -581,13 +573,13 @@ footer {
 .rnm-cards {
   display: flex;  
   flex-direction: column;
-  margin: 2% 2% 2% 0%;  
   background-image: url(https://cdn.discordapp.com/attachments/783499342010777631/1007426978086932621/portal4.png);
   background-position: center;
   background-repeat: no-repeat;
+  margin: 2% 2% 2% 0%;
   border: solid gray 3px;
-  box-shadow:inset 0 0  8px rgb(245, 245, 245);
   border-radius: 10px;
+  box-shadow:inset 0 0  8px rgb(245, 245, 245);
   transform-style: preserve-3d;
   transition: transform 2s;
   transition: -webkit-transform 2s;  
@@ -597,17 +589,18 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;  
-  border: solid grey 4px;  
-  animation: vibrate 0.8s;  
   margin-top: 1rem;
   margin-right: 1rem;
   margin-left: 1rem;
+  border: solid grey 4px;
+  border-radius: 10px;  
+  animation: vibrate 0.8s;  
 }
+
 .rnm-cards:hover {
   display: flex;  
-  -webkit-transform: rotateY( 360deg );
   transform: rotateY( 360deg ); 
+  -webkit-transform: rotateY( 360deg );
 }
 
 .rnm-card-text {
@@ -620,36 +613,34 @@ footer {
   text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 .rnm-text-area {
-  border: solid grey 3px;
+  background-color: #2ac944;
+  background-image: url(https://cdn.discordapp.com/attachments/783499342010777631/1007432316181823598/imageedit_4_2672907645.png);
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
   margin: 0.3rem;
   padding: 0.2rem;
-  text-shadow: 2px 2px 5px rgb(0, 0, 0);
-  background-color: #2ac944;  
-  background-image: url(https://cdn.discordapp.com/attachments/783499342010777631/1007432316181823598/imageedit_4_2672907645.png);
+  border: solid grey 3px;
 }
 
 /* STATUS CLASSES */
 
-.Alive {  
-  padding: 0.8rem;
-  padding-left: 0.1rem;
+.Alive {
   background-image: url(../icons/alive.svg);
   background-repeat: no-repeat;  
-}
-
-.Dead {   
   padding: 0.8rem;
   padding-left: 0.1rem;
+}
+
+.Dead {
   background-image: url(../icons/dead.svg);
   background-repeat: no-repeat;  
-}
-
-.unknown {  
   padding: 0.8rem;
   padding-left: 0.1rem;
+}
+
+.unknown {
   background-image: url(../icons/unknown.svg);
   background-repeat: no-repeat;
   background-position: 1%; 
+  padding: 0.8rem;
+  padding-left: 0.1rem;
 }
-
-
