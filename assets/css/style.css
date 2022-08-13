@@ -20,8 +20,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #fff;
+  color: #d5daf2;
   background-color: #000000;
   position: relative;
   margin: 0 auto;
@@ -30,16 +29,47 @@ body {
   min-height: 100vh;
 }
 
+/* DISPLAY, FONTS AND COLORS */
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #d5daf2;
+}
+
+.navbar, footer{
+  background-color: #03041a;
+}
+
+.navbar, .form-container, .form-container input, textarea, .form-container label, .background-mssg, .user-data, .user-content, .user-effect, .col, .table-header, footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+} 
+
+.welcome, .users-cards{
+  font-family: 'Kanit';
+}
+
+.navbar, .buttons, .form-message, .form-container, .input-radio, #received-message, .background-mssg, #text-form, #usersInfo, .col-left, .user-effect, .rnm-logo-container, .rnm-pagination-div, .rnm-counter-container, .btn-container, .rnm-pagination-div button, .rnm-parent-container, .rnm-img,  .footer {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar, label, textarea, #name, #phone, #email, #submit, .input-radio, .message-dom, #received-message, .background-mssg, #text-form, .col-left, .user-effect, .rnm-counter-container, .rnm-img {
+  align-items: center;
+}
+
+.welcome, .form, .table, .cards, .form-container p, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
+  text-align: center;
+}
+
 /*HEADER*/
 
-div.navbar {
-  display: flex;
+.navbar {
   justify-content: space-evenly;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  font-weight: 200;
-  background-color: #03041a;
   position: fixed;
   width: 100%;
   top: 0%;
@@ -47,20 +77,17 @@ div.navbar {
   z-index: 2;
 }
 
-div.navbar img {
+.navbar img {
   width: 150px;
 }
 
-div.navbar a {
-  color: #d5daf2;
+.navbar a {
   position: relative;
-  text-decoration: none;
   padding: 0.8rem;
   z-index: 0;
 }
 
-div.navbar a::before,
-div.navbar a::after {
+.navbar a::before, .navbar a::after {
   background: #d5daf2;
   position: absolute;
   left: 0px;
@@ -71,26 +98,23 @@ div.navbar a::after {
   transition: all 0.3s;
 }
 
-div.navbar a:before {
+.navbar a:before {
   top: 0px;
   transform: translateY(-10px);
 }
 
-div.navbar a:after {
+.navbar a:after {
   bottom: 0px;
   transform: translateY(10px);
 }
 
-div.navbar a:hover:before,
-div.navbar a:hover:after {
+.navbar a:hover:before, .navbar a:hover:after {
   opacity: 1;
   transform: translateY(0px);
 }
 
 .welcome {
-  font-family: 'Kanit';
   font-size: 3rem;
-  text-align: center;
   margin-top: 2rem;
 }
 
@@ -108,7 +132,6 @@ div.navbar a:hover:after {
 /*BUTTONS*/
 
 .buttons {
-  display: flex;
   justify-content: space-evenly;
   margin: 2rem 0;
 }
@@ -137,20 +160,19 @@ div.navbar a:hover:after {
   cursor: pointer;
 }
 
-.buttons a {
+.buttons button {
   font-family: 'Kanit', sans-serif;
   font-weight: bold;
   color: #00030d;
-  text-decoration: none;
   text-transform: uppercase;
 }
 
-.button-icon:hover, .button-icon:hover a {
+.button-icon:hover {
   color: #d5daf2;
   background-color: #4ca193;
 }
 
-.button-icon:active, .button-icon a:active {
+.button-icon:active {
   color: #3f445f;
   background-color: #40867b;
   box-shadow: none;
@@ -159,21 +181,16 @@ div.navbar a:hover:after {
 .form, .table, .cards {
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 /*FORM*/
 
 .form-message {
-  display: flex;
-  justify-content: center;
   width: 100%;
   margin: 50px 0;
 }
 
 .form-container {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   background-color: #010326;
   width: 55%;
@@ -182,20 +199,14 @@ div.navbar a:hover:after {
   border-radius: 10px;
 }
 
-.form-container p {
-  text-align: center;
-}
-
 .form-container h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  text-align: center;
   margin: 1rem;
 }
 
 .form-container h2 {
   font-size: 1rem;
-  text-align: center;
   margin: 1rem;
 }
 
@@ -211,24 +222,17 @@ fieldset {
 legend {
   font-size: 1.3rem;
   font-weight: bold;
-  text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 label {
-  padding-bottom: 0.5rem;
   display: flex;
-  align-items: center;
+  padding-bottom: 0.5rem;
 }
 
 textarea {
   padding: 2rem;
-}
-
-.form-container input, textarea, .form-container label{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
 }
 
 .form-container button{
@@ -238,7 +242,6 @@ textarea {
 
 textarea, #name, #phone, #email, #submit {	
   display: flex;
-  align-items: center;  
   font-size: 1.3rem;
   width: 100%;
   margin-bottom: 2rem;
@@ -249,9 +252,7 @@ textarea, #name, #phone, #email, #submit {
 }
 
 .input-radio {
-  display: flex;
   justify-content: flex-start;
-  align-items: center;
   height: 30px;
 }
 
@@ -265,7 +266,6 @@ textarea, #name, #phone, #email, #submit {
 
 .message-dom{
   display: flex;
-  align-items: center;
   flex-direction: column;
   box-sizing: border-box;
   width: 55%;
@@ -281,10 +281,7 @@ textarea, #name, #phone, #email, #submit {
 }
 
 #received-message {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
@@ -295,9 +292,6 @@ textarea, #name, #phone, #email, #submit {
 }
 
 .background-mssg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   background-color: #7eea2562;
   width: 90%;
@@ -311,14 +305,10 @@ textarea, #name, #phone, #email, #submit {
 
 .text-dimension {
   font-size: 1rem;
-  color: #fff;
   text-shadow: 1px 1px 2px #051f39;
 }  
 
 #text-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   width: 80%;
   padding: 0 ;
@@ -332,23 +322,12 @@ textarea, #name, #phone, #email, #submit {
 
 .text-message {
   font-weight: 500;
-  text-align: center;
   margin-top: 5px;
   text-shadow: 1px 1px 4px #051f39;
 }
 
 .text-message:last-child {
   margin-bottom: 15px;
-}
-
-/* FORM VALIDATION */
-
-input:invalid{
-  border-color: #900;
-}
-
-input:focus:invalid {
-  outline: none;
 }
 
 /* USERS */
@@ -359,9 +338,7 @@ input:focus:invalid {
 }
 
 .users-cards {
-  font-family: 'Kanit';
   font-size: 4.2rem;
-  text-align: center;
   margin: 0;
   padding: 0;
 }
@@ -372,8 +349,6 @@ input:focus:invalid {
 }
 
 #usersInfo {
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -391,7 +366,6 @@ input:focus:invalid {
 .user-title {
   font-size: 1.2rem;
   font-weight: bold;
-  text-align: center;
 }
 
 .user-text {
@@ -399,7 +373,6 @@ input:focus:invalid {
 }
 
 .user-data {
-  font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: normal;
 }
@@ -409,12 +382,9 @@ input:focus:invalid {
 }
 
 .col-left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #51a629;
   width: 60%;
-  height: 250px;
+  height: 300px;
 }
 
 .col-right {
@@ -424,9 +394,6 @@ input:focus:invalid {
 }
 
 .user-effect {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: rgba(171, 226, 145, 0.81);
   position: absolute;
   width: 0%;
@@ -451,15 +418,10 @@ input:focus:invalid {
 .users-table {
   width: 90%;
   margin: 0 auto;
-  border: 1px solid white;
   border-collapse: collapse;
 }
 
 .col {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: light 300;
-  text-align: center;
-  color: #ffffff;
   width: 15%;
   padding: 1rem;
   border: 3px solid white;
@@ -470,53 +432,18 @@ input:focus:invalid {
 }
 
 .table-header{
-  font-family: 'Montserrat';
+  color: #fff;
   font-size: 1.2rem;
-  font-weight: medium 400;
-  text-align: center;
+  font-weight: bold;
   background-color: #51a629;
   width: 15%;
   padding: 1rem;
   border: 3px solid white;
 }
 
-/*FOOTER*/
-
-footer {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
-  text-align: center;
-  background-color: #03041a;
-  position: absolute;
-  width: 99%;
-  padding: 1rem;
-  padding-right: 0%;
-  bottom: 0%;
-}
-
-.footer{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.footer a{
-  color: #fff;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.footer a:hover{
-  font-size: 1.1rem;
-  color: #fff;
-  transition: 0.5s;
-}
-
-/* Rick And Morty Cards */
-
 /* RICK AND MORTY TITLE LOGOS */
+
 .rnm-logo-container {
-  display: flex;
-  justify-content: center;
   margin: 0 auto;
   -webkit-animation-name: FadeInOut;
   animation-name: FadeInOut;
@@ -535,8 +462,8 @@ footer {
   position: fixed;
   width: 100px; 
   height: 100px;
-  bottom: 20px; 
   right: 10px; 
+  bottom: 20px; 
   z-index: 99; 
   border: solid white 1px; 
   box-sizing: content-box;
@@ -546,36 +473,26 @@ footer {
 
 /* PAGINATION BUTTONS AND COUNTER  */
 
-.rnm-pagination-div {
-  display: flex;  
-  justify-content: center;  
-}
-
 .rnm-counter-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
 }
 
 .btn-container {
-  display: flex;
-  justify-content: center;
   width: 10%;
   margin: 0% 2% 0 0%;
   padding: 1rem 1.5rem;  
 }
 
+.RNM-counter, .rnm-pagination-div button {
+  font-family: monospace, sans-serif;
+}
+
 .RNM-counter {
-  font-family: monospace;
   font-size: 1.5rem;
   padding-right: 0.5rem;
 }
 
 .rnm-pagination-div button {
-  display: flex;
-  justify-content: center;
-  font-family: monospace;
   font-size: 2rem;
   font-weight: bold;  
   background-color: rgb(11, 212, 44);
@@ -610,7 +527,6 @@ footer {
 }
 
 .rnm-parent-container{
-  display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100vw;  
@@ -621,6 +537,7 @@ footer {
 .rnm-cards {
   display: flex;  
   flex-direction: column;
+  color: #fff;
   background-image: url(https://cdn.discordapp.com/attachments/783499342010777631/1007426978086932621/portal4.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -634,9 +551,6 @@ footer {
 }
 
 .rnm-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 1rem;
   margin-right: 1rem;
   margin-left: 1rem;
@@ -657,8 +571,7 @@ footer {
   padding: 0.3rem;  
 }
 
-.rnm-card-text h3 {
-  text-align: center;  
+.rnm-card-text h3 { 
   text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
@@ -690,4 +603,27 @@ footer {
 .unknown {
   background-image: url(../icons/unknown.svg);
   background-position: 1%;
+}
+
+/*FOOTER*/
+
+footer {
+  position: absolute;
+  width: 99%;
+  padding: 1rem;
+  padding-right: 0%;
+  bottom: 0%;
+}
+
+.footer{
+  justify-content: space-evenly;
+}
+
+.footer a{
+  font-weight: 400;
+}
+
+.footer a:hover{
+  font-size: 1.1rem;
+  transition: 0.5s;
 }

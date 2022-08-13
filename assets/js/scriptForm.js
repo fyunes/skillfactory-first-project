@@ -37,6 +37,5 @@ const sendForm = () =>{
         </div>
       </div>
       </div>`;
-
   document.getElementById("received-message").innerHTML = body;
 };
