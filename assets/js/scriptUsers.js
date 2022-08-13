@@ -21,13 +21,10 @@ const userDataTable = (data) => {
   document.getElementById("usersTable").innerHTML = body;
 };
 
-//PROMISES WITH AXIOS
-
 const userData = async () => {
   let body = ``;
   try {
     const dataUsers = await axios(urlBase);
-
     dataUsers.data.forEach(({ id, name, email, address, phone, website }) => {
       body += `
   <div>
