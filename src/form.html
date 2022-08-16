@@ -26,48 +26,87 @@
 			<div class="form-container">
 				<h1>Contact us!</h1>
 				<h2>Fill out the form below to send us a message</h2>
-				<form id="form">
-					<fieldset>
-						<legend>Your contact information</legend>
-							<label for="name">Name: </label>
-								<input type="text" id="name" name="name" placeholder="John Doe" autofocus required>
-							<label for="phone">Phone number: </label>
-								<input type="tel" id="phone" name="phone" placeholder="+54115123456">
-							<label for="email">Email: </label> 
-								<input type="email" id="email" name="email" placeholder="johndoe@mail.com" required>
-							<label for="message">Message: </label>
-								<textarea name="message" id="message" cols="90" rows="10" required></textarea>
-							<p>How would you like us to contact you?</p>
-							<div class="input-radio">
-								<input type="radio" name="contact" id="contactEmail" value="Email">
-								<label for="contactEmail">Email</label>
-							</div>
-							<div class="input-radio">
-								<input type="radio" name="contact" id="contactPhone" value="Phone">
-								<label for="contactPhone">Phone</label>
-							</div>
-							<div class="input-radio">
-								<input type="radio" name="contact" id="contactWhapp" value="WhatsApp">
-								<label for="contactWhapp">WhatsApp</label>
-							</div>
-						<button class="button-icon" type="button" onclick="sendForm()">Tuki and send</button>
-					</fieldset>						
+				<form class="form" id="form" action="">
+					<legend>Your contact information</legend>
+					<!-- ************ name ************ -->
+					<div class="container-form" id="field-name">
+						<label class="label-form" for="name">Name: </label>
+						<div class="input-container-form">
+							<input type="text" class="input-form" id="name" name="name" placeholder="John Doe">
+							<i class="validation-status fas fa-times-circle"></i>
+						</div>
+						<p class="input-error">It has to be from 4 to 16 digits and can only contain numbers, letters and underscore.</p>
+					</div>
+					<!-- ************ phone ************ -->
+					<div class="container-form" id="field-phone">
+						<label class="label-form" for="phone">Phone: </label>
+						<div class="input-container-form">
+							<input type="tel" class="input-form" id="phone" name="phone" placeholder="1157123456">
+							<i class="validation-status fas fa-times-circle"></i>
+						</div>
+						<p class="input-error">It can only contain numbers and the maximum is 14 digits.</p>
+					</div>
+					<!-- ************ email ************ -->
+					<div class="container-form" id="field-email">
+						<label class="label-form"  for="email">Email: </label> 
+						<div class="input-container-form">
+							<input type="email" class="input-form" id="email" name="email" placeholder="johndoe@mail.com">
+							<i class="validation-status fas fa-times-circle"></i>
+						</div>
+						<p class="input-error">Can only contain letters, numbers, periods, hyphens and underscores.</p>
+					</div>
+					<!-- ************ message ************ -->
+					<div class="container-form" id="field-email">
+						<label class="label-form" for="message">Message: </label>
+						<div class="input-container-form">
+							<textarea name="message" id="message" cols="90" rows="10"></textarea>
+							<i class="validation-status fas fa-times-circle"></i>
+						</div>
+					</div>
+					<!-- ************ contact ************ -->
+					<p class="label-radio">How would you like us to contact you?</p>
+					<div class="input-radio">
+						<input type="radio" name="contact" id="contactEmail" value="Email">
+						<label for="contactEmail">Email</label>
+					</div>
+					<div class="input-radio">
+						<input type="radio" name="contact" id="contactPhone" value="Phone">
+						<label for="contactPhone">Phone</label>
+					</div>
+					<div class="input-radio">
+						<input type="radio" name="contact" id="contactWhapp" value="WhatsApp">
+						<label for="contactWhapp">WhatsApp</label>
+					</div>
+					<!-- ******** message empty form ******** -->
+					<div class="empty-message-form" id="empty-message-form">
+						<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Please fill in the form correctly.</p>
+					</div>
+					<!-- ************ send ************ -->
+					<div class="container-form cont-btn-send">
+						<button type="submit" class="button-icon" onclick="sendForm()">Tuki and send</button>
+						<p class="success-message-form" id="success-message-form">Form sent successfully!</p>
+					</div>
 				</form>		
 			</div>
-			<div class="message-area">
-				<div id="received-message"></div>
+			<div class="message-area" id="message-area">
+				<div class="received-message" id="received-message"></div>
+				<!-- Is added with js in the dom -->
 			</div>
 		</section>
 	</main>
 
     <footer>
-        <div class="footer">
-            <p>Developed by <a href="https://github.com/fyunes" target="_blank">Franco Yunes</a> - <a href="https://github.com/saveasfabri" target="_blank">Fabricio Hang</a> - <a href="https://github.com/MelinaLencina" target="_blank">Melina Lencina</a> - <a href="https://github.com/hernandw" target="_blank">Williams Hernández</a></p>
-            <p>&copy; 2022 - <span>All rights reserved</span></p>
+        <div class="text-footer">
+					<p>Developed by:</p>
+					<a href="https://github.com/fyunes" target="_blank">Franco Yunes</a>					
+					<a href="https://github.com/saveasfabri" target="_blank">Fabricio Hang</a>
+					<a href="https://github.com/MelinaLencina" target="_blank">Melina Lencina</a>
+					<a href="https://github.com/hernandw" target="_blank">Williams Hernández</a>
+					<p>&copy; 2022 - All rights reserved</p>
         </div>
     </footer>	
 
 	<script src="../assets/js/scriptForm.js"></script>
-
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

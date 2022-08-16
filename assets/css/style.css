@@ -25,7 +25,7 @@ body {
   position: relative;
   margin: 0 auto;
   padding-top: 150.56px;
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
   min-height: 100vh;
 }
 
@@ -52,16 +52,16 @@ a:visited {
   font-family: 'Kanit';
 }
 
-.navbar, .buttons, .form-message, .form-container, .input-radio, #received-message, .background-mssg, #text-form, #usersInfo, .col-left, .user-effect, .rnm-logo-container, .rnm-pagination-div, .rnm-counter-container, .btn-container, .rnm-pagination-div button, .rnm-parent-container, .rnm-img,  .footer {
+.navbar, .buttons, .form-message, .form-container, .input-radio, #received-message, .background-mssg, #text-form, #usersInfo, .col-left, .user-effect, .rnm-logo-container, .rnm-pagination-div, .rnm-counter-container, .btn-container, .rnm-pagination-div button, .rnm-parent-container, .rnm-img {
   display: flex;
   justify-content: center;
 }
 
-.navbar, label, textarea, #name, #phone, #email, #submit, .input-radio, .message-dom, #received-message, .background-mssg, #text-form, .col-left, .user-effect, .rnm-counter-container, .rnm-img {
+.navbar, textarea, #name, #phone, #email, #submit, .input-radio, .message-dom, #received-message, .background-mssg, #text-form, .col-left, .user-effect, .rnm-counter-container, .rnm-img {
   align-items: center;
 }
 
-.welcome, .form, .table, .cards, .form-container p, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
+.welcome, .form-index, .table-index, .cards, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
   text-align: center;
 }
 
@@ -178,7 +178,7 @@ a:visited {
   box-shadow: none;
 }
 
-.form, .table, .cards {
+.form-index, .table-index, .cards {
   display: flex;
   flex-direction: column;
 }
@@ -188,13 +188,15 @@ a:visited {
 .form-message {
   width: 100%;
   margin: 50px 0;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .form-container {
   flex-direction: column;
   background-color: #010326;
-  width: 55%;
-  margin-left: 4rem;
+  width: 40%;
+  /* margin-left: 4rem; */
   padding: 1em;
   border-radius: 10px;
 }
@@ -210,7 +212,8 @@ a:visited {
   margin: 1rem;
 }
 
-fieldset {
+.form {
+  position: relative;
   width: 100%;
   margin: 1rem 0 2rem 0;
   padding: 0;
@@ -226,31 +229,63 @@ legend {
   margin-bottom: 1rem;
 }
 
-label {
-  display: flex;
-  padding-bottom: 0.5rem;
+.container-form {
+  margin-bottom: 10px;
 }
 
-textarea {
-  padding: 2rem;
+.label-form {
+  display: block;
+  text-align: left;
+  padding: 5px;
+  margin-top: 10px;
 }
 
-.form-container button{
-  font-family: 'Kanit', sans-serif;
-  text-transform: uppercase;
+.input-container-form {
+  position: relative;
+  transition: .3s ease all;
+
+}
+.input-container-form:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 }
 
-textarea, #name, #phone, #email, #submit {	
+textarea, #name, #phone, #email {	
   display: flex;
   font-size: 1.3rem;
   width: 100%;
-  margin-bottom: 2rem;
   padding: .4rem 1rem;
   border: none;
   border-radius: 10px;
+  outline: none;
   box-sizing: border-box;
 }
+input:focus {
+  background-color: #c2dcfa;
+}
 
+textarea {
+  padding-top: 1rem;
+  margin-bottom: 20px;
+  
+}
+
+textarea:focus {
+  background-color: #c2dcfa;
+  background-image: url(../icons/text_area.png);
+  background-repeat: no-repeat;
+}
+
+
+.input-form {
+  position: relative;
+  z-index: 0;
+}
+
+.label-radio {
+  text-align: left;
+}
 .input-radio {
   justify-content: flex-start;
   height: 30px;
@@ -264,11 +299,107 @@ textarea, #name, #phone, #email, #submit {
   padding: 0;
 }
 
-.message-dom{
+/* **** Validation Styles **** */
+
+.input-error {
+  font-size: 12px;
+  color: #F66060;
+	margin-bottom: 0;
+  margin-top: 6px;
+	display: none;
+}
+
+.validation-status {
+  position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+  z-index: 0;
+}
+
+.empty-message-form {
+  position: absolute;
+  height: 45px;
+	line-height: 45px;
+	color: #F66060;
+	padding: 0 15px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+	display: none;
+}
+
+.empty-message-form-active {
+  display: block;
+}
+
+.empty-message-form p {
+  margin: 0;
+}
+
+.cont-btn-send {
+  position: relative;
+  margin-top: 20px;
+}
+
+.success-message-form {
+  position: absolute;
+  height: 45px;	
+	color: #7dea25;
+  padding: 0 15px;
+  line-height: 45px;
+  text-shadow: 0 0 30px #7dea25;	
+  bottom: 25px;
+  left: 0;
+  right: 0;
+	display: none;
+  z-index: -1;
+}
+
+.success-message-form-active {
+  display: block;
+}
+
+.container-form-correct .validation-status {
+  top: 10px;
+	color: #7dea25;
+	opacity: 1;
+}
+
+.container-form-incorrect .label-form {
+	color: #F66060;
+}
+
+.container-form-incorrect .validation-status {
+  top: 10px;
+	color: #F66060;
+	opacity: 1;
+}
+
+.container-form-incorrect .input-container-form {
+  border-radius: 14px;
+	border: 3px solid #F66060;
+}
+
+/* message input form in dom */
+
+.message-area{
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 55%;
+  width: 35%;
+  display: none;
+}
+
+.message-area-active{
+  display: flex;
+}
+
+#received-message {
+  flex-direction: column;
+  width: 100%;
 }
 
 .portal-img {
@@ -280,21 +411,16 @@ textarea, #name, #phone, #email, #submit {
   width: 100%;
 }
 
-#received-message {
-  flex-direction: column;
-  width: 100%;
-}
-
 .img-title {
-  width: 80%;
+  width: 70%;
   height: 100%;
-  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .background-mssg {
   flex-direction: column;
   background-color: #7eea2562;
-  width: 90%;
+  width: 80%;
   height: auto;
   margin-top: 30px;
   padding: 5px;
@@ -343,7 +469,7 @@ textarea, #name, #phone, #email, #submit {
   padding: 0;
 }
 
-.table{
+.table-index{
   font-size: 1.3rem;
   margin-bottom: 3rem;
 }
@@ -608,22 +734,34 @@ textarea, #name, #phone, #email, #submit {
 /*FOOTER*/
 
 footer {
-  position: absolute;
-  width: 99%;
-  padding: 1rem;
-  padding-right: 0%;
-  bottom: 0%;
+  position: relative;
+  width: 100%;
+  height: 100px;
 }
 
-.footer{
+.text-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.footer a{
+.text-footer p {
+  font-size: .8rem;
+}
+
+.text-footer a {
+  font-size: 1rem;
   font-weight: 400;
 }
 
-.footer a:hover{
-  font-size: 1.1rem;
-  transition: 0.5s;
+.text-footer a:hover {
+  left: 0;
+  right: 0;
+  color: #7dea25;
+  transform: translate( 0, -2px);
+  text-shadow: 0px 0px 5px #7dea25;
+  transition: 0.3s;
 }
