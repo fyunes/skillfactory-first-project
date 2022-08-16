@@ -61,7 +61,7 @@ a:visited {
   align-items: center;
 }
 
-.welcome, .form-index, .table, .cards, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
+.welcome, .form-index, .table-index, .cards, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
   text-align: center;
 }
 
@@ -178,7 +178,7 @@ a:visited {
   box-shadow: none;
 }
 
-.form, .table, .cards {
+.form-index, .table-index, .cards {
   display: flex;
   flex-direction: column;
 }
@@ -469,7 +469,7 @@ textarea:focus {
   padding: 0;
 }
 
-.table{
+.table-index{
   font-size: 1.3rem;
   margin-bottom: 3rem;
 }
