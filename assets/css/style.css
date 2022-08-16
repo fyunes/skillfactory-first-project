@@ -61,7 +61,7 @@ a:visited {
   align-items: center;
 }
 
-.welcome, .form, .table, .cards, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
+.welcome, .form-index, .table, .cards, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
   text-align: center;
 }
 
@@ -740,25 +740,29 @@ footer {
 }
 
 .text-footer {
-  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
 }
 
-.text-footer p{
+.text-footer p {
   font-size: .8rem;
 }
 
-.text-footer a{
+.text-footer a {
+  position: relative;
   font-size: 1rem;
   font-weight: 400;
 }
 
-.text-footer a:hover{
+.text-footer a:hover {
+  left: 0;
+  right: 0;
   color: #7dea25;
-  font-size: 1.1rem;
-  transition: 0.5s;
+  transform: translate( 0, -2px);
+  text-shadow: 0px 0px 5px #7dea25;
+  transition: 0.3s;
 }
