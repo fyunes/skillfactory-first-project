@@ -20,12 +20,11 @@
 }
 
 body {
+  position: relative;
   color: #d5daf2;
   background-color: #000000;
-  position: relative;
   margin: 0 auto;
   padding-top: 150.56px;
-  /* padding-bottom: 80px; */
   min-height: 100vh;
 }
 
@@ -52,7 +51,7 @@ a:visited {
   font-family: 'Kanit';
 }
 
-.navbar, .buttons, .form-message, .form-container, .input-radio, #received-message, .background-mssg, #text-form, #usersInfo, .col-left, .user-effect, .rnm-logo-container, .rnm-pagination-div, .rnm-counter-container, .btn-container, .rnm-pagination-div button, .rnm-parent-container, .rnm-img {
+.navbar, .buttons, .form-message, .form-container, .input-radio, #received-message, .background-mssg, #text-form, #usersInfo, .col-left, .user-effect, .rnm-logo-container, .rnm-pagination-div, .rnm-counter-container, .btn-container, .rnm-pagination-div button, .rnm-parent-container, .rnm-img, .text-footer {
   display: flex;
   justify-content: center;
 }
@@ -61,7 +60,7 @@ a:visited {
   align-items: center;
 }
 
-.welcome, .form-index, .table-index, .cards, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
+.welcome, .form-index, .table-index, .cards-index, .form-container h1, .form-container h2, legend, .text-message, .users-cards, .user-title, .col, .table-header, .rnm-card-text h3, footer {
   text-align: center;
 }
 
@@ -69,8 +68,8 @@ a:visited {
 
 .navbar {
   justify-content: space-evenly;
-  font-size: 1.2rem;
   position: fixed;
+  font-size: 1.2rem;
   width: 100%;
   top: 0%;
   padding: 0;
@@ -88,8 +87,8 @@ a:visited {
 }
 
 .navbar a::before, .navbar a::after {
-  background: #d5daf2;
   position: absolute;
+  background: #d5daf2;
   left: 0px;
   width: 100%;
   height: 2px;
@@ -178,7 +177,7 @@ a:visited {
   box-shadow: none;
 }
 
-.form-index, .table-index, .cards {
+.form-index, .table-index, .cards-index {
   display: flex;
   flex-direction: column;
 }
@@ -186,17 +185,15 @@ a:visited {
 /*FORM*/
 
 .form-message {
+  justify-content: space-evenly;
   width: 100%;
   margin: 50px 0;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .form-container {
   flex-direction: column;
   background-color: #010326;
   width: 40%;
-  /* margin-left: 4rem; */
   padding: 1em;
   border-radius: 10px;
 }
@@ -266,9 +263,8 @@ input:focus {
 }
 
 textarea {
-  padding-top: 1rem;
   margin-bottom: 20px;
-  
+  padding-top: 1rem;
 }
 
 textarea:focus {
@@ -299,36 +295,35 @@ textarea:focus {
   padding: 0;
 }
 
-/* **** Validation Styles **** */
+/* Validation Style */
 
 .input-error {
+	display: none;
   font-size: 12px;
   color: #F66060;
-	margin-bottom: 0;
   margin-top: 6px;
-	display: none;
+	margin-bottom: 0;
 }
 
 .validation-status {
   position: absolute;
+	font-size: 16px;
 	right: 10px;
 	bottom: 15px;
-	z-index: 100;
-	font-size: 16px;
-	opacity: 0;
   z-index: 0;
+	opacity: 0;
 }
 
 .empty-message-form {
+	display: none;
   position: absolute;
+	color: #F66060;
   height: 45px;
 	line-height: 45px;
-	color: #F66060;
-	padding: 0 15px;
+  right: 0;
   bottom: 50px;
   left: 0;
-  right: 0;
-	display: none;
+	padding: 0 15px;
 }
 
 .empty-message-form-active {
@@ -345,16 +340,16 @@ textarea:focus {
 }
 
 .success-message-form {
+	display: none;
   position: absolute;
-  height: 45px;	
 	color: #7dea25;
-  padding: 0 15px;
-  line-height: 45px;
   text-shadow: 0 0 30px #7dea25;	
+  height: 45px;	
+  line-height: 45px;
+  padding: 0 15px;
+  right: 0;
   bottom: 25px;
   left: 0;
-  right: 0;
-	display: none;
   z-index: -1;
 }
 
@@ -363,8 +358,8 @@ textarea:focus {
 }
 
 .container-form-correct .validation-status {
-  top: 10px;
 	color: #7dea25;
+  top: 10px;
 	opacity: 1;
 }
 
@@ -373,24 +368,21 @@ textarea:focus {
 }
 
 .container-form-incorrect .validation-status {
-  top: 10px;
 	color: #F66060;
+  top: 10px;
 	opacity: 1;
 }
 
 .container-form-incorrect .input-container-form {
-  border-radius: 14px;
 	border: 3px solid #F66060;
+  border-radius: 14px;
 }
 
-/* message input form in dom */
-
 .message-area{
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 35%;
   display: none;
+  flex-direction: column;
+  width: 35%;
+  box-sizing: border-box;
 }
 
 .message-area-active{
@@ -437,7 +429,7 @@ textarea:focus {
 #text-form {
   flex-direction: column;
   width: 80%;
-  padding: 0 ;
+  padding: 0;
 }
 
 .label-message {
@@ -479,9 +471,9 @@ textarea:focus {
 }
 
 .user-card {
+  position: relative;
   color: #000;
   background-color: #fff;
-  position: relative;
   width: 30rem;
   margin: 20px;
   border-radius: 25px;
@@ -520,8 +512,8 @@ textarea:focus {
 }
 
 .user-effect {
-  background: rgba(171, 226, 145, 0.81);
   position: absolute;
+  background: rgba(171, 226, 145, 0.81);
   width: 0%;
   height: 100%;
   top: 0;
@@ -740,16 +732,15 @@ footer {
 }
 
 .text-footer {
-  width: 100%;
-  height: 100%;
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 
 .text-footer p {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .text-footer a {
@@ -758,10 +749,10 @@ footer {
 }
 
 .text-footer a:hover {
-  left: 0;
-  right: 0;
   color: #7dea25;
-  transform: translate( 0, -2px);
   text-shadow: 0px 0px 5px #7dea25;
+  right: 0;
+  left: 0;
+  transform: translate( 0, -2px);
   transition: 0.3s;
 }

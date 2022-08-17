@@ -26,9 +26,8 @@
 			<div class="form-container">
 				<h1>Contact us!</h1>
 				<h2>Fill out the form below to send us a message</h2>
-				<form class="form" id="form" action="">
+				<form class="form" id="form" action="#">
 					<legend>Your contact information</legend>
-					<!-- ************ name ************ -->
 					<div class="container-form" id="field-name">
 						<label class="label-form" for="name">Name: </label>
 						<div class="input-container-form">
@@ -37,7 +36,6 @@
 						</div>
 						<p class="input-error">It has to be from 4 to 16 digits and can only contain numbers, letters and underscore.</p>
 					</div>
-					<!-- ************ phone ************ -->
 					<div class="container-form" id="field-phone">
 						<label class="label-form" for="phone">Phone: </label>
 						<div class="input-container-form">
@@ -46,7 +44,6 @@
 						</div>
 						<p class="input-error">It can only contain numbers and the maximum is 14 digits.</p>
 					</div>
-					<!-- ************ email ************ -->
 					<div class="container-form" id="field-email">
 						<label class="label-form"  for="email">Email: </label> 
 						<div class="input-container-form">
@@ -55,15 +52,13 @@
 						</div>
 						<p class="input-error">Can only contain letters, numbers, periods, hyphens and underscores.</p>
 					</div>
-					<!-- ************ message ************ -->
-					<div class="container-form" id="field-email">
+					<div class="container-form" id="field-message">
 						<label class="label-form" for="message">Message: </label>
 						<div class="input-container-form">
 							<textarea name="message" id="message" cols="90" rows="10"></textarea>
 							<i class="validation-status fas fa-times-circle"></i>
 						</div>
 					</div>
-					<!-- ************ contact ************ -->
 					<p class="label-radio">How would you like us to contact you?</p>
 					<div class="input-radio">
 						<input type="radio" name="contact" id="contactEmail" value="Email">
@@ -77,11 +72,9 @@
 						<input type="radio" name="contact" id="contactWhapp" value="WhatsApp">
 						<label for="contactWhapp">WhatsApp</label>
 					</div>
-					<!-- ******** message empty form ******** -->
 					<div class="empty-message-form" id="empty-message-form">
 						<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Please fill in the form correctly.</p>
 					</div>
-					<!-- ************ send ************ -->
 					<div class="container-form cont-btn-send">
 						<button type="submit" class="button-icon" onclick="sendForm()">Tuki and send</button>
 						<p class="success-message-form" id="success-message-form">Form sent successfully!</p>
@@ -90,7 +83,6 @@
 			</div>
 			<div class="message-area" id="message-area">
 				<div class="received-message" id="received-message"></div>
-				<!-- Is added with js in the dom -->
 			</div>
 		</section>
 	</main>
@@ -106,7 +98,7 @@
         </div>
     </footer>	
 
-	<script src="../assets/js/scriptForm.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="../assets/js/scriptForm.js"></script>
 </body>
 </html>
